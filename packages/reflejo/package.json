@@ -5,7 +5,7 @@
     "module": "build/esm/index.js",
     "main": "build/cjs/index.js",
     "browser": "build/umd/index.production.js",
-    "types": "build/types/packages/reflejo/src/index.d.ts",
+    "types": "build/types",
     "files": [
         "build/*",
         "src"
@@ -14,11 +14,12 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rollup --config rollup.config.js && npm run typecheck",
         "typecheck": "tsc -b",
+        "dev": "npm run watch",
         "watch": "concurrently --kill-others \"rollup --config rollup.config.js -w\" \"npm run typecheck -- --watch\"",
         "clean": "npm exec --workspaces -c \"rm -rf build || true\"",
         "prettier": "prettier \"packages/*/{src/**,examples/**/src/**}.{md,js,jsx,ts,tsx,json}\"",
         "prettier:write": "npm run prettier -- --write",
-        "visualize": "lerna exec 'open build/stats-html.html'",
+        "visualize": "npm exec 'open build/stats-html.html'",
         "compile": "node_modules/.bin/tsc -p tsconfig.json --noEmit --emitDeclarationOnly false"
     },
     "author": "",

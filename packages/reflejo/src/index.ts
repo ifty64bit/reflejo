@@ -1,5 +1,4 @@
-export default () => {
-    return {
-        name: 'Tusher',
-    };
+export default {
+    name: 'Tusher',
+    how: 'New anen ',
 };
