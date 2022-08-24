@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css';
 import reflejo from 'reflejo';
 
 const Home: NextPage = () => {
-    console.log(reflejo.how);
     return (
         <div className={styles.container}>
             <Head>
