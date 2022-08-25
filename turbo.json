@@ -10,9 +10,6 @@
         },
         "dev": {
             "cache": false
-        },
-        "watch": {
-            "outputs": ["dist/**", "build/**"]
         }
     }
 }
